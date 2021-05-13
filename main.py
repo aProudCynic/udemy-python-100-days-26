@@ -37,6 +37,7 @@ nato_alphabet = create_alphabet_from_file(ALPHABET_FILE_PATH)
 # Create a list of the phonetic code words from a word that the user inputs.
 word = input('Write a word to know its NATO alphabetization: ')
 if is_word(word):
-    pass
+    nato_alphabetization = [nato_alphabet.get(letter.upper()) for letter in word]
+    print(nato_alphabetization)
 else:
     print('Write one word next time please')
