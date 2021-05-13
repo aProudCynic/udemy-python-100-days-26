@@ -1,3 +1,5 @@
+import pandas
+
 student_dict = {
     "student": ["Angela", "James", "Lily"], 
     "score": [56, 76, 98]
@@ -8,7 +10,6 @@ for (key, value) in student_dict.items():
     #Access key and value
     pass
 
-import pandas
 student_data_frame = pandas.DataFrame(student_dict)
 
 #Loop through rows of a data frame
