@@ -4,7 +4,8 @@ ALPHABET_FILE_PATH = 'nato_phonetic_alphabet.csv'
 
 
 def create_alphabet_from_file(filepath):
-    return pandas.read_csv(filepath)
+    raw_data = pandas.read_csv(filepath)
+    return {row[0]:row[1] for (index, row) in raw_data.iterrows()}
 
 def is_word(word):
     return ' ' in word
