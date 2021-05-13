@@ -8,7 +8,7 @@ def create_alphabet_from_file(filepath):
     return {row[0]:row[1] for (index, row) in raw_data.iterrows()}
 
 def is_word(word):
-    return ' ' in word
+    return not ' ' in word
 
 student_dict = {
     "student": ["Angela", "James", "Lily"], 
